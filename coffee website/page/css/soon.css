@@ -1,0 +1,43 @@
+.soon{
+    height: 100vh;
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.soon h1{
+    font-size: 15rem;
+    margin: 0 auto 0 auto;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(red,black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.bord{
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    top:90px;
+    animation: bordmove 5s infinite;
+}
+@keyframes bordmove {
+    0%   {top: 20vh; left: 0px; background: red;border-radius: 50% 50% 0 0 }
+    25%  {top: 20vh; left: 92.2%; background: black; border-radius: 0 100% 100% 0;}
+    50%  {top: 70vh; left:92.2%; background: red; border-radius: 0 0 100% 100%;}
+    75%  {top: 70vh; left: 0px; background:black; border-radius: 100% 0 0 100%;}
+    100% {top: 20vh; left: 0px; background: red; border-radius: 100% 100% 0 0;}
+  }
+
+@media (max-width:991px){
+    .soon h1{
+        font-size:10rem
+        
+    }
+    .bord{
+        width:20px;
+        height:20px; 
+    }
+}
